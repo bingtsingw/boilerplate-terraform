@@ -16,4 +16,4 @@ cd prod/aliyun-dns && terragrunt apply
 
 In fact, `terraform` or `terragrunt` does not support `dotenv`, so we cannot use a `.env` file directly.
 
-Instead, we can use the idea behind `dotenv`, use `terragrunt`'s `yamldecode` function and a `.env.yml` file to simulate this feature.
+Instead, we can borrow the idea behind `dotenv`. Just parse a `.env.yml` file with `terragrunt`'s `yamldecode` function to simulate this feature.
