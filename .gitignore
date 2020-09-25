@@ -1,0 +1,8 @@
+**/.terraform/*
+**/*.tfvars
+*.tfstate
+*.tfstate.*
+crash.log
+
+.env.yml
+**/_terragrunt.tf
