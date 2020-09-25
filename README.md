@@ -1,4 +1,4 @@
-# Terragrunt Demo
+# Terragrunt Example
 
 A simple example for using [terragrunt](https://github.com/gruntwork-io/terragrunt) with remote backend and [dotenv](https://github.com/motdotla/dotenv) like variables management.
 
