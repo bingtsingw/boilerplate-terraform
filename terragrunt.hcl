@@ -2,26 +2,26 @@ locals {
   env = yamldecode(file("${get_parent_terragrunt_dir()}/.env.yml"))
 
   remote = {
-    ak      = local.aliyun.ak
-    sk      = local.aliyun.sk
-    region  = local.aliyun.region
+    ak      = local.alicloud.ak
+    sk      = local.alicloud.sk
+    region  = local.alicloud.region
     backend = "oss"
     bucket  = local.env.remote_bucket
     prefix  = local.env.remote_prefix
     key     = "terraform.tfstate"
   }
 
-  aliyun = {
-    ak     = local.env.aliyun_access_key
-    sk     = local.env.aliyun_secret_key
-    region = local.env.aliyun_region
+  alicloud = {
+    ak     = local.env.alicloud_access_key
+    sk     = local.env.alicloud_secret_key
+    region = local.env.alicloud_region
   }
 }
 
 inputs = {
   global = {
-    remote = local.remote
-    aliyun = local.aliyun
+    remote   = local.remote
+    alicloud = local.alicloud
   }
 }
 
