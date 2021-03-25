@@ -2,13 +2,13 @@ locals {
   env = yamldecode(file("${get_parent_terragrunt_dir()}/.env.yml"))
 
   remote = {
-    ak      = local.alicloud.ak
-    sk      = local.alicloud.sk
-    region  = local.alicloud.region
-    backend = "oss"
+    backend = local.env.remote_backend
+    ak      = local.env.remote_access_key
+    sk      = local.env.remote_secret_key
+    region  = local.env.remote_region
     bucket  = local.env.remote_bucket
     prefix  = local.env.remote_prefix
-    key     = "terraform.tfstate"
+    key     = local.env.remote_key
   }
 
   alicloud = {
