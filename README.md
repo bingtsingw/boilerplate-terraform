@@ -1,18 +1,23 @@
-# Terragrunt Example
+# Terraform Boilerplate
 
-A simple example for using [terragrunt](https://github.com/gruntwork-io/terragrunt) with remote backend and [dotenv](https://github.com/motdotla/dotenv) like variables management.
+This is a simple example for using terraform with [terragrunt](https://github.com/gruntwork-io/terragrunt).
+
+## Features
+
+- [x] [dotenv](https://github.com/motdotla/dotenv) like variables management.
+- [x] remote backend with alicloud.
 
 ## Usage
 
 ```shell
-cp .env.yml.example .env.yml
 # set environment variables in .env.yml file
-cd prod/aliyun-dns && terragrunt apply
+cp .env.yml.example .env.yml
+
+# run terragrunt commmand with make
+make plan
 ```
 
-## Explanation
-
-### Dotenv
+## Explanation for Dotenv
 
 In fact, `terraform` or `terragrunt` does not support `dotenv`, so we cannot use a `.env` file directly.
 
