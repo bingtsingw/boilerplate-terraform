@@ -1,4 +1,5 @@
 **/.terraform/*
+**/.terragrunt-cache/*
 **/*.tfvars
 *.tfstate
 *.tfstate.*
@@ -6,3 +7,4 @@ crash.log
 
 .env.yml
 **/_terragrunt.tf
+graph.svg
