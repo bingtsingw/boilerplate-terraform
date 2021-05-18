@@ -10,6 +10,10 @@ provider-upgrade:
 module-upgrade:
 	find . -type f -name "*.tf" -print0 | xargs -0 sed -i '' -e 's/ref=v.*"/ref=v$(MODULE_VERSION)"/g'
 
+# usage: make module-clone MODULE_NAME=xxx
+module-clone:
+	cp -R .template/aliyun prod/${MODULE_NAME}
+
 graph:
 	terragrunt graph-dependencies | dot -Tsvg > graph.svg
 
