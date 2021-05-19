@@ -4,7 +4,7 @@ This is a simple example for using [terraform](https://www.terraform.io) with [t
 
 ## Features
 
-- [x] [dotenv](https://github.com/motdotla/dotenv) like variables management.
+- [x] [dotenv](https://github.com/motdotla/dotenv)-like variables management.
 - [x] remote backend with alicloud oss.
 
 ## Usage
@@ -13,9 +13,16 @@ This is a simple example for using [terraform](https://www.terraform.io) with [t
 # set environment variables in .env.yml file
 cp .env.yml.example .env.yml
 
-# run terragrunt commmand with make
+# run make command
+make module-clone MODULE_NAME=xxx
 make plan
+make apply
 ```
+
+## Use Template CheatSheet
+
+- [ ] `cp .env.yml.example .env.yml`
+- [ ] update `README.md` and `LICENSE`
 
 ## Explanation for Dotenv
 
@@ -26,5 +33,5 @@ Instead, we can borrow the idea behind `dotenv`. Just parse a `.env.yml` file wi
 ## TODO
 
 - [ ] add tests
-- [ ] test backend supoprt for aws
-- [ ] add workflow for validate style
+- [ ] add backend supoprt for aws
+- [ ] add workflow for style lint
