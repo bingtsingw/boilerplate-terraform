@@ -8,3 +8,4 @@ crash.log
 .env.yml
 **/_terragrunt.tf
 graph.svg
+.template/**/.terraform.lock.hcl
