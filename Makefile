@@ -12,7 +12,11 @@ module-upgrade:
 
 # usage: make module-clone MODULE_NAME=xxx
 module-clone:
-	cp -R .template/aliyun prod/${MODULE_NAME}
+	mkdir -p prod/${MODULE_NAME} && cp .template/aliyun/{base.tf,main.tf,outputs.tf,terragrunt.hcl} prod/${MODULE_NAME}
+
+env-example:
+	sed 's/".*"/""/' .env.yml > .env.yml.example && \
+	sed -i 's/remote_key\: ""/remote_key\: "terraform\.tfstate"/' .env.yml.example
 
 graph:
 	terragrunt graph-dependencies | dot -Tsvg > graph.svg
