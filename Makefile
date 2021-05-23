@@ -1,7 +1,16 @@
 default: fmt
 
+fmt-check:
+	terraform fmt -recursive -check .template && \
+	terraform fmt -recursive -check modules && \
+	terraform fmt -recursive -check prod && \
+	terragrunt hclfmt --terragrunt-check
+
 fmt:
-	terraform fmt -recursive && terragrunt hclfmt
+	terraform fmt -recursive .template && \
+	terraform fmt -recursive modules && \
+	terraform fmt -recursive prod && \
+	terragrunt hclfmt
 
 provider-upgrade:
 	terragrunt run-all init --upgrade

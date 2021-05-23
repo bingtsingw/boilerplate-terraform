@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [ assigned, opened, synchronize, reopened, labeled ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: hashicorp/setup-terraform@v1.3.2
+        with:
+          terraform_version: latest
+      - uses: autero1/action-terragrunt@v1.1.0
+        with:
+          terragrunt_version: latest
+      - run: make fmt-check

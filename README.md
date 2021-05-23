@@ -30,4 +30,4 @@ Instead, we can borrow the idea behind `dotenv`. Just parse a `.env.yml` file wi
 
 - [ ] add tests
 - [ ] add backend supoprt for aws
-- [ ] add workflow for style lint
+- [x] add workflow for style lint
