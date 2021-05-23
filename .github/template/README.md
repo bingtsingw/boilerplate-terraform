@@ -1,6 +1,6 @@
 # [repo]
 
-> This repo is created from [bingtsingw/boilerplate-terraform]](https://github.com/bingtsingw/boilerplate-terraform), template is synced on [date]. Please update the date every time you sync with the template manually.
+> This repo is created from [bingtsingw/boilerplate-terraform](https://github.com/bingtsingw/boilerplate-terraform), template is synced on [date]. Please update the date every time you sync with the template manually.
 
 ## Usage
 
