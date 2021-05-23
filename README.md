@@ -1,11 +1,12 @@
-# Terraform Boilerplate
+# boilerplate-terraform
 
-This is a simple example for using [terraform](https://www.terraform.io) with [terragrunt](https://github.com/gruntwork-io/terragrunt).
+This is a boilerplate using [terraform](https://www.terraform.io) with [terragrunt](https://github.com/gruntwork-io/terragrunt).
 
 ## Features
 
-- [x] [dotenv](https://github.com/motdotla/dotenv)-like variables management.
-- [x] remote backend with alicloud oss.
+- [dotenv](https://github.com/motdotla/dotenv)-like variables management.
+- remote backend with alicloud oss.
+- built-in `Makefile` to simplify daily work.
 
 ## Usage
 
@@ -18,11 +19,6 @@ make module-clone MODULE_NAME=xxx
 make plan
 make apply
 ```
-
-## Use Template CheatSheet
-
-- [ ] `cp .env.yml.example .env.yml`
-- [ ] update `README.md` and `LICENSE`
 
 ## Explanation for Dotenv
 
