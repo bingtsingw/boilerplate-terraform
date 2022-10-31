@@ -7,9 +7,9 @@
   color: a2eeef
   description: 'enhancement'
 
-- name: dependabot
+- name: dependencies
   color: 1abc9c
-  description: 'dependabot'
+  description: 'dependencies'
 
 - name: PR-block
   color: cfd3d7
