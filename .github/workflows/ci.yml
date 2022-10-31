@@ -16,7 +16,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v1.3.2
         with:
           terraform_version: latest
-      - uses: autero1/action-terragrunt@v1.1.0
+      - uses: autero1/action-terragrunt@v1.2.0
         with:
           terragrunt_version: latest
       - run: make fmt-check
