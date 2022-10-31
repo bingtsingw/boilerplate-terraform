@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "*.hcl": "terraform"
+    "*.hcl": "terraform",
+    "*.tf": "terraform"
   },
   "[terraform]": {
     "editor.formatOnSave": true
