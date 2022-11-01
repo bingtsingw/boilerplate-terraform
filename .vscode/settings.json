@@ -1,4 +1,5 @@
 {
+  "editor.defaultFormatter": "hashicorp.terraform",
   "files.associations": {
     "*.hcl": "terraform",
     "*.tf": "terraform"
@@ -6,7 +7,5 @@
   "[terraform]": {
     "editor.formatOnSave": true
   },
-  "terraform-ls.experimentalFeatures": {
-    "validateOnSave": true
-  }
+  "terraform.experimentalFeatures.validateOnSave": true
 }
